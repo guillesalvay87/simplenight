@@ -5,7 +5,7 @@ import { HomePage } from '../pages/HomePage';
 import { HotelsPage } from '../pages/HotelsPage';
 import { SearchResultsPage } from '../pages/SearchResultsPage';
 
-test('Booking flow', async ({ page, baseURL }) => {
+test('View Map flow', async ({ page, baseURL }) => {
   const home = new HomePage(page);
   const hotels = new HotelsPage(page);
   const results = new SearchResultsPage(page);

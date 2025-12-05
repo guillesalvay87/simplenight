@@ -9,8 +9,8 @@ export class SearchResultsPage {
   }
 
   async switchToMapView() {
-    await this.page.locator(LOCATORS.SearchResultsPage.gridViewButton).click({ delay: 200 });
-    await this.page.locator(LOCATORS.SearchResultsPage.mapViewButton).click();
+    await this.page.getByTestId(LOCATORS.SearchResultsPage.gridViewButton).click({ delay: 200 });
+    await this.page.getByTestId(LOCATORS.SearchResultsPage.mapViewButton).click();
 
     await this.page.waitForLoadState('networkidle');
     await this.assertMapIsLoaded();

@@ -10,14 +10,14 @@ export class HotelsPage {
 
   async search(location: string): Promise<void> {
     // LOCATION
-    await this.page.locator(LOCATORS.HotelsPage.locationTrigger).click();
-    await this.page.locator(LOCATORS.HotelsPage.locationInput).fill(location);
+    await this.page.getByTestId(LOCATORS.HotelsPage.locationTrigger).click();
+    await this.page.getByTestId(LOCATORS.HotelsPage.locationInput).fill(location);
 
     await this.page.waitForSelector(`span:text-is("${location}")`);
     await this.page.getByText(location, { exact: true }).click();
 
     // CALENDAR
-    await this.page.locator(LOCATORS.HotelsPage.calendar).click();
+    await this.page.getByTestId(LOCATORS.HotelsPage.calendar).click();
 
     const next = this.page.locator(LOCATORS.HotelsPage.monthNext);
     for (let i = 0; i < 2; i++) {
@@ -26,14 +26,14 @@ export class HotelsPage {
     }
 
     for (let i = 0; i < 2; i++) {
-      await this.page.locator(LOCATORS.HotelsPage.checkIn).click();
+      await this.page.getByTestId(LOCATORS.HotelsPage.checkIn).click();
     }
 
-    await this.page.locator(LOCATORS.HotelsPage.checkOut).click();
-    await this.page.locator(LOCATORS.HotelsPage.calendarDone).click();
+    await this.page.getByTestId(LOCATORS.HotelsPage.checkOut).click();
+    await this.page.getByTestId(LOCATORS.HotelsPage.calendarDone).click();
 
     // GUESTS
-    await this.page.locator(LOCATORS.HotelsPage.guestsButton).click();
+    await this.page.getByTestId(LOCATORS.HotelsPage.guestsButton).click();
     await this.page.locator(LOCATORS.HotelsPage.addChildButton).click();
 
     await this.page.locator(LOCATORS.HotelsPage.child1AgeDropdown).click();
@@ -42,6 +42,6 @@ export class HotelsPage {
     await options.nth(2).click({ force: true });
 
     // SEARCH
-    await this.page.locator(LOCATORS.HotelsPage.searchButton).click();
+    await this.page.getByTestId(LOCATORS.HotelsPage.searchButton).click();
   }
 }

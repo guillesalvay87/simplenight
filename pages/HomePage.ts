@@ -13,6 +13,6 @@ export class HomePage {
   }
 
   async selectHotelsCategory(): Promise<void> {
-    await this.page.locator(LOCATORS.HomePage.hotelsTab).click();
+    await this.page.getByTestId(LOCATORS.HomePage.hotelsTab).click();
   }
 }
