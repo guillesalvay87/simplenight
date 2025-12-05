@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "types": ["node", "playwright"]
+  },
+  "include": [
+    "tests/**/*.ts",
+    "pages/**/*.ts",
+    "global.d.ts"
+  ]
+}
