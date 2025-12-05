@@ -8,15 +8,15 @@ Take into account that this was my first time working with Playwright and TypeSc
 
 ----------------
 ## Tech Stack:
-- Node.js 18+
+- Node.js
 - Playwright
 - TypeScript
 
 ----------------
 ## Installation:
 1. Clone the repository
-2. Install dependencies:
-	npm install
+2. Install dependencies: npm install
+3. Run test
 
 ----------------
 ## Project structure:
@@ -36,7 +36,7 @@ playwright.config.ts
 tsconfig.json
 
 ----------------
-## Test Scope:
+## Test Scope: Validate map view in the search results
 1. Navigate to https://app.simplenight.com/
 2. Select "Hotels" category from the available navbar options
 3. Perform a search within the selected category, using input parameters:
@@ -44,6 +44,11 @@ tsconfig.json
 - Dates: May 20-22
 - Guests: 1 Adult + 1 Child
 4. Select Map view for the Search results
+
+----------------
+## Commands:
+1. To execute test: npx playwright test --ui --headed --reporter=html
+2. To see the HTML report: npx playwright show-report
 
 ----------------
 ## Author:
