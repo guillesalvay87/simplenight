@@ -1,8 +1,8 @@
 import { Page } from '@playwright/test';
+import { LOCATORS } from '../utils/locators';
 
 export class HomePage {
   readonly page: Page;
-  readonly hotelsTab = '[data-testid="category-search-bar-tab(static_hotels)"]';
 
   constructor(page: Page) {
     this.page = page;
@@ -13,6 +13,6 @@ export class HomePage {
   }
 
   async selectHotelsCategory(): Promise<void> {
-    await this.page.locator(this.hotelsTab).click();
+    await this.page.locator(LOCATORS.HomePage.hotelsTab).click();
   }
 }
