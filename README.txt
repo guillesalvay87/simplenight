@@ -30,9 +30,8 @@ Take into account that this was my first time working with Playwright and TypeSc
 	SearchResultsPage.ts
 /tests
 	hotelSearch.spec.ts
-playwright.congif.ts
+playwright.config.ts
 tsconfig.json
-README.txt
 
 ----------------
 ## Test Scope:
